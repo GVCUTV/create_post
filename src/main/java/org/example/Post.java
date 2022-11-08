@@ -71,7 +71,6 @@ public class Post {
     public void setVideo(URL video) {
         this.video = video;
     }
-
     public User getAudio() {
         return audio;
     }

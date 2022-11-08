@@ -1,5 +1,4 @@
 package org.example;
-
 import java.net.URL;
 
 public class PostControl {
