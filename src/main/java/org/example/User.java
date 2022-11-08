@@ -6,7 +6,10 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private List<Post> posts;
+
+
+    private List<Post> publishedPosts;
+    private List<Post> savedPosts;
 
     public Integer getId() {
         return id;
@@ -40,12 +43,21 @@ public class User {
         this.password = password;
     }
 
-    public List<Post> getPosts() {
-        return posts;
+
+    public List<Post> getPublishedPosts() {
+        return publishedPosts;
     }
 
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
+    public void setPublishedPosts(List<Post> publishedPosts) {
+        this.publishedPosts = publishedPosts;
+    }
+
+    public List<Post> getSavedPosts() {
+        return savedPosts;
+    }
+
+    public void setSavedPosts(List<Post> savedPosts) {
+        this.savedPosts = savedPosts;
     }
 
     public User(){
@@ -53,19 +65,27 @@ public class User {
         this.username=null;
         this.email=null;
         this.password=null;
-        this.posts=null;
+        this.publishedPosts=null;
+        this.savedPosts=null;
     }
-    public Post addPost(Post post){
-        if(posts!=null){
-            posts.add(post);
+    public Post addPublishedPost(Post post){
+        if(publishedPosts!=null){
+            publishedPosts.add(post);
             return post;
         }
         return null;
     }
-    public boolean deletePost(Post post){
+    public Post addSavedPost(Post post){
+        if(savedPosts!=null){
+            savedPosts.add(post);
+            return post;
+        }
+        return null;
+    }
+    /*public boolean deletePublishedPost(Post post){
         if(posts!=null){
             return posts.remove((Object)post);
         }
         return false;
-    }
+    }*/
 }

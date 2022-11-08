@@ -75,8 +75,13 @@ public class PostBoundary {
     public void setPublicationPlace(String publicationPlace) {
         this.publicationPlace = publicationPlace;
     }
-    public Post createPost() {
-        return new PostControl().createPost(title, body, link, image, video, author, publicationPlace);
+    public Post publishPost() {
+        return new PostControl().publishPost(title, body, link, image, video, author, publicationPlace);
+
+    }
+
+    public Post savePost() {
+        return new PostControl().savePost(title, body, link, image, video, author, publicationPlace);
 
     }
 
